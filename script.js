@@ -122,4 +122,5 @@ function companyNameGenerator(){
     return finalstr
 }
 //funtion to generate random names for the company
+//this is the only thing i want to commit
 console.log(companyNameGenerator())
