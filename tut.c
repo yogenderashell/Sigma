@@ -30,18 +30,35 @@
 
 
 //find the product of all the digits of no.
+// #include <stdio.h>
+
+// int main()
+// {
+//     int num = 1234,prod=1;
+//     while (num!=0)
+//     {
+//         int rem =num%10;
+//         prod*=rem;
+//         num/=10;
+//     }
+//     printf("%d is the product to all the digits of the no.",prod);
+    
+//     return 0;
+// }
+
+
 #include <stdio.h>
 
 int main()
 {
-    int num = 1234,prod=1;
-    while (num!=0)
-    {
-        int rem =num%10;
-        prod*=rem;
-        num/=10;
+    int num1,num2=0;
+    printf("Enter the number :\n");
+    scanf("%d",&num1);
+    while(num1!=0){
+        int rem = num1%10;
+        num2 = num2*10 + rem;
+        num1 /= 10;
     }
-    printf("%d is the product to all the digits of the no.",prod);
-    
+    printf("%d",num2);
     return 0;
 }
