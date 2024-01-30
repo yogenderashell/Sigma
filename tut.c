@@ -47,18 +47,43 @@
 // }
 
 
+// #include <stdio.h>
+
+// int main()
+// {
+//     int num1,num2=0;
+//     printf("Enter the number :\n");
+//     scanf("%d",&num1);
+//     while(num1!=0){
+//         int rem = num1%10;
+//         num2 = num2*10 + rem;
+//         num1 /= 10;
+//     }
+//     printf("%d",num2);
+//     return 0;
+// }
+
+
+//check if the no. is palindrome or not
 #include <stdio.h>
 
 int main()
 {
-    int num1,num2=0;
-    printf("Enter the number :\n");
-    scanf("%d",&num1);
+    int num1,rev=0;
+    printf("Enter a number:\n");
+    scanf("%d", &num1);
+    int n = num1;
     while(num1!=0){
         int rem = num1%10;
-        num2 = num2*10 + rem;
+        rev = rev*10 +rem;
         num1 /= 10;
     }
-    printf("%d",num2);
+    if (rev == n){
+        printf("Palindrome\n");
+    }
+    else{
+        printf("Not\n");
+    }
+    printf("%d",rev);
     return 0;
 }
