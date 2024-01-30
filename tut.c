@@ -13,18 +13,35 @@
 //     return 0;
 // }
 
+// #include <stdio.h>
+
+// int main(){
+//     //find the sum of all the digits
+//     int num = 1234,sum;
+//     while (num!=0)
+//     {
+//         int rem = num%10;
+//         sum+=rem;
+//         num/=10;
+//     }
+//     printf("the sum of all the digits of a no. is: %d",sum);
+//     return 0;
+// }
+
+
+//find the product of all the digits of no.
 #include <stdio.h>
 
 int main()
 {
-    //find the sum of all the digits
-    int num = 1234,sum;
+    int num = 1234,prod=1;
     while (num!=0)
     {
-        int rem = num%10;
-        sum+=rem;
+        int rem =num%10;
+        prod*=rem;
         num/=10;
     }
-    printf("the sum of all the digits of a no. is: %d",sum);
+    printf("%d is the product to all the digits of the no.",prod);
+    
     return 0;
 }
