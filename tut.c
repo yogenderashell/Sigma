@@ -190,3 +190,53 @@
 //     }
 //     return 0;
 // }
+
+//3. Write a program in C to find the sum of all elements of the array.
+// #include <stdio.h>
+
+// int main()
+// {
+//     int t,sum=0;
+//     printf("Enter the total number of elements you want in your array: ");
+//     scanf("%d",&t);
+//     int arr[100];
+//     printf("Input %d no. of Elements: \n",t);
+//     for (int i = 1; i <= t; i++)
+//     {
+//         printf("Enter the value of element %d: ",i);
+//         scanf("%d",&arr[i-1]);
+//     }
+//     for (int i = 1; i <= t; i++){
+//         sum+=arr[i-1];
+//     }
+//     printf("%d",sum);
+//     return 0;
+// }
+
+
+// 4. Write a program in C to copy the elements of one array into another array.
+#include <stdio.h>
+int main()
+{
+    int t,sum=0;
+    printf("Enter the total number of elements you want in your array: ");
+    scanf("%d",&t);
+    int arr[100];
+    printf("Input %d no. of Elements: \n",t);
+    for (int i = 1; i <= t; i++)
+    {
+        printf("Enter the value of element %d: ",i);
+        scanf("%d",&arr[i-1]);
+    }
+    int cpy[100]={0};
+    for (int i = 1; i <= t; i++)
+    {
+        cpy[i-1]=arr[i-1];
+    }
+    for (int i = 1; i <= t; i++)
+    {
+        printf("%d\n",cpy[i-1]);
+    }
+    
+    return 0;
+}
