@@ -215,28 +215,83 @@
 
 
 // 4. Write a program in C to copy the elements of one array into another array.
+// #include <stdio.h>
+// int main()
+// {
+//     int t,sum=0;
+//     printf("Enter the total number of elements you want in your array: ");
+//     scanf("%d",&t);
+//     int arr[100];
+//     printf("Input %d no. of Elements: \n",t);
+//     for (int i = 1; i <= t; i++)
+//     {
+//         printf("Enter the value of element %d: ",i);
+//         scanf("%d",&arr[i-1]);
+//     }
+
+
+//     int cpy[100]={0};
+//     for (int i = 1; i <= t; i++)
+//     {
+//         cpy[i-1]=arr[i-1];
+//     }
+//     for (int i = 1; i <= t; i++)
+//     {
+//         printf("%d\n",cpy[i-1]);
+//     }
+    
+//     return 0;
+// }
+
+
+// 5. Write a program in C to count the total number of duplicate elements in an array.
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     int t,count=0;
+//     printf("Enter the total number of elements you want in your array: ");
+//     scanf("%d",&t);
+//     int arr[100];
+//     printf("Input %d no. of Elements: \n",t);
+//     for (int i = 1; i <= t; i++)
+//     {
+//         printf("Enter the value of element %d: ",i);
+//         scanf("%d",&arr[i-1]);
+//     }
+//     for (int i = 1; i <= t; i++){
+//         for(int j = i+1;j<=t;j++){
+//             if (arr[i] == arr[j]){
+//                 count++;
+//             }
+//         }   
+//     }
+//     printf("%d",count);
+    
+//     return 0;
+// }
+//6.C program to count frequency of digits in an integer
 #include <stdio.h>
+#define BASE 10
 int main()
 {
-    int t,sum=0;
-    printf("Enter the total number of elements you want in your array: ");
-    scanf("%d",&t);
-    int arr[100];
-    printf("Input %d no. of Elements: \n",t);
-    for (int i = 1; i <= t; i++)
-    {
-        printf("Enter the value of element %d: ",i);
-        scanf("%d",&arr[i-1]);
+    int num,temp;
+    int i,lastdigit;
+    int freq[BASE];
+    printf("Enter the no.: ");
+    scanf("%d",&num);
+    for(i=0;i<BASE;i++){
+        freq[i]=0;
     }
-    int cpy[100]={0};
-    for (int i = 1; i <= t; i++)
-    {
-        cpy[i-1]=arr[i-1];
+    temp = num;
+    while (temp!=0){
+        lastdigit = temp%10;
+        temp/=10;
+        freq[lastdigit]++;
     }
-    for (int i = 1; i <= t; i++)
-    {
-        printf("%d\n",cpy[i-1]);
+    for(i=0;i<BASE;i++){
+        printf("Frequency of %d is %d\n",i,freq[i]);
     }
-    
     return 0;
 }
