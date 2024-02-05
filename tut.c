@@ -1285,37 +1285,655 @@
 
 //12. program to count frequency of each element in an array
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main()
-{
-    int size;
-    printf("Enter the size of the array: ");
-    scanf("%d", &size);
-    int arr[size];
-    int freq[size];
-    for(int i=0;i<size;i++){
-        scanf("%d",&arr[i]);
-        freq[i]=-1;
-    }
-    /* Air */
-    for(int i=0;i<size;i++){
-        int count = 1;
-        for(int j=i+1;j<size;j++){
-            if(arr[i]==arr[j]){
-                count++;
-                freq[j]=0;
-            }
-        }
-        if(freq[i]!=0){
-            freq[i]=count;
-        }
-    }
+// int main()
+// {
+//     int size;
+//     printf("Enter the size of the array: ");
+//     scanf("%d", &size);
+//     int arr[size];
+//     int freq[size];
+//     for(int i=0;i<size;i++){
+//         scanf("%d",&arr[i]);
+//         freq[i]=-1;
+//     }
+//     /* Air */
+//     for(int i=0;i<size;i++){
+//         int count = 1;
+//         for(int j=i+1;j<size;j++){
+//             if(arr[i]==arr[j]){
+//                 count++;
+//                 freq[j]=0;
+//             }
+//         }
+//         if(freq[i]!=0){
+//             freq[i]=count;
+//         }
+//     }
 
-    for(int i=0;i<size;i++){
-        if(freq[i]!=0){
-            printf("the freq of %d is %d\n",arr[i],freq[i]);
-        }
-    }
-    return 0;
-}
+//     for(int i=0;i<size;i++){
+//         if(freq[i]!=0){
+//             printf("the freq of %d is %d\n",arr[i],freq[i]);
+//         }
+//     }
+//     return 0;
+// }
+
+
+//program to find the freq of each element in an array
+// #include <stdio.h>
+
+// int main()
+// {
+//     int size = 6;
+//     int arr[]={1,2,1,2,1,2};
+//     int freq[]={-1,-1,-1,-1,-1,-1};
+//     for(int i=0;i<size;i++){
+//         int count = 1;
+//         for(int j=i+1;j<size;j++){
+//             if(arr[i]==arr[j]){
+//                 count++;
+//                 freq[j]=0;
+//             }
+//         }
+//         if(freq[i]!=0){
+//             freq[i]=count;
+//         }
+//     }
+//     for(int i=0;i<size;i++){
+//         if (arr[i]!=0)
+//         {
+//             printf("the freq of %d is %d\n",arr[i],freq[i]);
+//         }
+        
+//     }
+//     return 0;
+// }
+
+
+
+//13. Write a C program to print all unique elements in the array
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     int size;
+//     printf("Enter the size of the array: ");
+//     scanf("%d",&size);
+//     int arr[size];
+//     int freq[size];
+//     for(int i=0;i<size;i++){
+//         scanf("%d",&arr[i]);
+//         freq[i]=-1;
+//     }
+//     for(int i=0;i<size;i++){
+//         int count =1;
+//         for(int j=i+1;j<size;j++){
+//             if (arr[i]==arr[j]){
+//                 count++;
+//                 freq[j]=0;
+//             }
+//         }
+//         if(freq[i]!=0){
+//             freq[i]=count;
+//         }
+//     }
+//     int dupcount = 0;
+//     for(int i=0;i<size;i++){
+//         if(freq[i]!=0){
+//             // printf("the freq of %d is %d\n",arr[i],freq[i]);
+//             dupcount++;
+//         }
+//     }
+//     printf("total no. of duplicates in the array : %d",dupcount);
+//     return 0;
+// }
+
+
+
+//14. program to delete duplicate elements from array
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     int size;
+//     printf("Enter the size of the array: ");
+//     scanf("%d",&size);
+//     int arr[size];
+//     int freq[size];
+
+//     for(int i =0;i<size;i++){
+//         scanf("%d",&arr[i]);
+//         freq[i]=-1;
+//     }
+//     for(int i=0;i<size;i++){
+//         int count =1;
+//         for(int j=i+1;j<size;j++){
+//             if (arr[i]==arr[j]){
+//                 count++;
+//                 freq[j]=0;
+//             }
+//         }
+//         if(freq[i]!=0){
+//             freq[i]=count;
+//         }
+//     }
+//     printf("Array after removal of duplicate elements: \n");
+//     for(int i=0;i<size;i++){
+//         if (freq[i]!=0){
+//             // printf("teh freq of %d is %d\n",arr[i],freq[i]);
+//             printf("%d,",arr[i]);
+//         }
+//     }
+//     return 0;
+// }
+
+
+// 15.program to delete duplicate elements from array
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     int size1,size2,size3;
+//     size1 = 5;
+//     size2 = 4;
+//     size3 = size1+size2;
+//     int arr1[]={1, 4, 6, 9, 15};
+//     int arr2[]={2, 5, 8, 10};
+//     int arr3[size3];
+//     for(int i=0;i<size3;i++){
+//         if (i<size1){
+//             arr3[i]=arr1[i];
+//         }
+//         else{
+//             arr3[i]=arr2[i-size1];
+//         }
+//     }
+//     for(int i=0;i<size3;i++){
+//         for(int j=0;j<size3;j++){
+//             if(arr3[i]<arr3[j]){
+//                 int temp = arr3[i];
+//                 arr3[i]=arr3[j];
+//                 arr3[j]=temp;
+//             }
+//         }
+//     }
+//     for(int i=0;i<size3;i++){
+//         printf("%d,",arr3[i]);
+//     }
+//     return 0;
+// }
+
+// 16.program to find reverse of array
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     int arr[] = {10, 5, 16, 35, 500};
+//     int size = sizeof(arr)/sizeof(arr[0]);
+//     for(int i=0;i<size;i++){
+//         printf("%d,",arr[i]);
+//     }
+//     printf("reveresed: \n");
+//     for(int i=size;i>0;i--){
+//         printf("%d,",arr[i]);
+//     }
+//     return 0;
+// }
+
+//17.  program to put even and odd elements of array in two separate array
+
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     int arr[]={0,1,2,3,4,5,6,7,8,9};
+//     int size = sizeof(arr)/sizeof(arr[0]);
+//     int evenarray[size];
+//     int oddarray[size];
+//     for(int i=0;i<size;i++){
+//         evenarray[i]=0;
+//         oddarray[i]=0;
+//     }
+//     for(int i=0;i<size;i++){
+//         if(arr[i]%2==0){
+//             evenarray[i]=arr[i];
+//         }
+//         else{
+//             oddarray[i]=arr[i];
+//         }
+//     }
+//     for(int i=0;i<size;i++){
+//         printf("%d,",arr[i]);
+//     }
+//     printf("\nEven No.: ");
+//     for(int i=0;i<size;i++){
+//         if (evenarray[i]!=0){
+//             printf("%d,",evenarray[i]);
+//         }
+//     }
+//     printf("\nOdd No.: ");
+//     for(int i=0;i<size;i++){
+//         if (oddarray[i]!=0){
+//             printf("%d,",oddarray[i]);
+//         }
+//     }
+//     return 0;
+// }
+
+
+// 18. program to search element in an array
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     int arr[]={10, 12, 20, 25, 13, 10, 9, 40, 60, 5};
+//     int size = sizeof(arr)/sizeof(arr[0]);
+//     printf("Enter the element you want the index of: ");
+//     int num;
+//     scanf("%d",&num);
+//     int index = 0;
+//     while(arr[index]!=num){
+//         index++;
+//     }
+//     printf("Index of the given number %d is %d",arr[index],index);
+//     return 0;
+// }
+
+
+//19.program to sort array in ascending or descending order
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     int arr[]={20, 2, 10, 6, 52, 31, 0, 45, 79, 40};
+//     int size = sizeof(arr)/sizeof(arr[0]);
+//     for(int i=0;i<size;i++){
+//         for(int j=i+1;j<size;j++){
+//             if (arr[i]<arr[j]){
+//                 int temp = arr[i];
+//                 arr[i] = arr[j];
+//                 arr[j] = temp;
+//             }
+//         }
+//     }
+//     for(int i=0;i<size;i++){
+//         printf("%d,",arr[i]);
+//     }
+//     return 0;
+// }
+
+// 20.program to sort even and odd elements of array separately
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     int arr[]={0, 5, 1, 2, 3, 4, 6, 12, 10, 9};
+//     int size = sizeof(arr)/sizeof(arr[0]);
+//     int even[size];
+//     int odd[size];
+//     for(int i=0;i<size;i++){
+//         even[i]=0;
+//         odd[i]=0;
+//     }
+//     for(int i=0;i<size;i++){
+//         if (arr[i]%2==0){
+//             even[i]=arr[i];
+//         }
+//         else{
+//             odd[i]=arr[i];
+//         }
+//     }
+//     for(int i=0;i<size;i++){
+//         for(int j=i+1;j<size;j++){
+//             if (odd[i]>odd[j]){
+//                 int temp = odd[i];
+//                 odd[i] = odd[j];
+//                 odd[j] = temp;
+//             }
+//             if (even[i]>even[j]){
+//                 int temp = even[i];
+//                 even[i] = even[j];
+//                 even[j] = temp;
+//             }
+//         }
+//     }
+//     for(int i=0;i<size;i++){
+//         if (even[i]!=0){
+//         printf("%d ",even[i]);
+//         }
+//     }
+//     for(int i=0;i<size;i++){
+//         if (odd[i]!=0){
+//         printf("%d ",odd[i]);
+//         }
+//     }
+//     return 0;
+// }
+
+
+
+//21. program to left rotate an array
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     int arr[]={1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+//     int num;
+//     int size = sizeof(arr)/sizeof(arr[0]);
+//     printf("Enter the no. of times you want to rotate: ");
+//     scanf("%d",&num);
+     
+//     /* Air */
+//     while(num!=0){
+//     int first = arr[0];
+//     for(int i=0;i<size;i++){
+//         for(int j=i+1;j<size;j++){
+//             arr[i]=arr[j];
+//             break;
+//         }
+//     }
+//         arr[size-1]=first;
+//         num--;
+//     }
+
+
+
+//     for(int i=0;i<size;i++){
+//         printf("%d,",arr[i]);
+//     }
+//     return 0;
+// }
+
+
+// 22.program to left rotate an array
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     int arr[]={1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+//     int size = sizeof(arr)/sizeof(arr[0]);
+//     int num;
+//     printf("Enter the no. of times you want to rotate it: ");
+//     scanf("%d",&num);
+//     while(num!=0){
+//     int first = arr[0];
+//     for(int i=0;i<size;i++){
+//         for(int j=i+1;j<size;j++){
+//             arr[i]=arr[j];
+//             break;
+//         }
+//     }
+//         arr[size-1]=first;
+//         num--;
+//     }
+//     for(int i=0;i<size;i++){
+//         printf("%d,",arr[i]);
+//     }
+    
+//     return 0;
+// }
+
+
+
+/*<------------------------------------------Matrix-------------------------------------------->*/
+
+// 1.program to add/subtract two matrices
+
+
+// #include <stdio.h>
+// #define size 3
+// int main()
+// {
+//     int A[size][size];   
+//     int B[size][size];   
+//     int C[size][size];
+
+//     int row,col;
+//     printf("Enter the elements of Matrix A: ");
+//     for(row=0;row<size;row++){
+//         for(col=0;col<size;col++){
+//             scanf("%d",&A[row][col]);
+//         }
+//     }   
+//     printf("Enter the elements of Matrix B: ");
+//     for(row=0;row<size;row++){
+//         for(col=0;col<size;col++){
+//             scanf("%d",&B[row][col]);
+//         }
+//     }
+//     for(row=0;row<size;row++){
+//         for(col=0;col<size;col++){
+//             C[row][col] = A[row][col]+B[row][col];
+//         }
+//     }
+
+//     /* printinf of the final matrix */
+//     for(row=0;row<size;row++){
+//         for(col=0;col<size;col++){
+//             printf("%d ",C[row][col]);
+//         }
+//         printf("\n");
+//     }   
+//     /*End*/
+
+//     return 0;
+// }
+
+
+//2.Write a C program to perform Scalar matrix multiplication.
+
+// #include <stdio.h>
+// #define size 3
+// int main()
+// {
+//     int A[size][size];
+//     int row,col;
+//     printf("Enter the elements of Matrix A: ");
+//     for(row=0;row<size;row++){
+//         for(col=0;col<size;col++){
+//             scanf("%d",&A[row][col]);
+//         }
+//     }
+//     int num;
+//     printf("Enter the scaler multiplier: ");
+//     scanf("%d",&num);
+//     for(row=0;row<size;row++){
+//         for(col=0;col<size;col++){
+//             A[row][col]*=num;
+//         }
+//     }
+
+
+//     /* printinf of the final matrix */
+//     for(row=0;row<size;row++){
+//         for(col=0;col<size;col++){
+//             printf("%d ",A[row][col]);
+//         }
+//         printf("\n");
+//     }   
+//     /*End*/
+//     return 0;
+// }
+
+
+// 3.Write a C program to multiply two matrices
+
+
+// #include <stdio.h>
+// #define size 3
+// int main()
+// {
+//     int A[size][size];
+//     int B[size][size];
+//     int C[size][size];
+//     int row,col,i,sum;
+//     printf("Enter the elements of Matrix A: ");
+//     for(row=0;row<size;row++){
+//         for(col=0;col<size;col++){
+//             scanf("%d",&A[row][col]);
+//         }
+//     }
+//     printf("Enter the elements of Matrix B: ");
+//     for(row=0;row<size;row++){
+//         for(col=0;col<size;col++){
+//             scanf("%d",&B[row][col]);
+//         }
+//     }
+
+//     /*Doing the Actual task of multiplying the two matrices*/
+//     for(row=0;row<size;row++){
+//         for(col=0;col<size;col++){
+//             sum =0;
+//             for(i=0;i<size;i++){
+//                 sum+=A[row][i]*B[i][col];
+//             }
+//             C[row][col]=sum;
+//         }
+//     }
+
+    // /* printinf of the final matrix */
+    // for(row=0;row<size;row++){
+    //     for(col=0;col<size;col++){
+    //         printf("%d ",C[row][col]);
+    //     }
+    //     printf("\n");
+    // }   
+    // /*End*/
+//     return 0;
+// }
+
+// 4. program to check whether two matrices are equal or not
+
+// #include <stdio.h>
+// #define size 3
+
+// int main()
+// {
+//     int A[size][size];    
+//     int B[size][size];
+//     printf("Enter the elements of matrix A: ");
+//     int row,col;
+//     for(row=0;row<size;row++){
+//         for(col=0;col<size;col++){
+//             scanf("%d",&A[row][col]);
+//         }
+//     }
+//     printf("Enter the elements of matrix B: ");
+//     for(row=0;row<size;row++){
+//         for(col=0;col<size;col++){
+//             scanf("%d",&B[row][col]);
+//         }
+//     }
+//     int isEqual = 0;
+//     for(row=0;row<size;row++){
+//         for(col=0;col<size;col++){
+//             if(A[row][col]==B[row][col]){
+//                 isEqual = 1;
+//             }
+//         }
+//     }
+
+//     /* printinf of the final matrix */
+//     if (isEqual){
+//         printf("Equal");
+//     }
+//     else{
+//         printf("Not equal");
+//     }
+//     /*End*/
+//     return 0;
+// }
+
+// 5. program to find sum of main diagonal elements of a matrix
+// #include <stdio.h>
+// #define size 3
+// int main()
+// {
+//     int A[size][size];
+//     int row,col,sum=0;
+//     printf("Enter the elements of matrix A: ");
+//     for(row=0;row<size;row++){
+//         for(col=0;col<size;col++){
+//             scanf("%d",&A[row][col]);
+//         }
+//     }
+//     for(row=0;row<size;row++){
+//         for(col=0;col<size;col++){
+//             if(row==col){
+//                 sum+=A[row][col];
+//             }
+//         }
+//     }
+//     printf("%d",sum);
+//     return 0;
+// }
+
+// 6. program to find the sum of opposite diagonal elements of a matrix
+
+// #include <stdio.h>
+// #define size 3
+// int main()
+// {
+//     int A[size][size];
+//     int row,col,sum=0;
+//     printf("Enter the elements of matrix A: ");
+//     for(row=0;row<size;row++){
+//         for(col=0;col<size;col++){
+//             scanf("%d",&A[row][col]);
+//         }
+//     }
+//     for(row=0;row<size;row++){
+//         for(col=0;col<size;col++){
+//             if((row+1+col+1)==size+1){
+//                 sum+=A[row][col];
+//             }
+//         }
+//     }
+//     printf("%d",sum);
+//     return 0;
+// }
+
+
+// 7. program to find sum of each row and columns of a matrix
+
+// #include <stdio.h>
+// #define size 3
+// int main()
+// {
+//     int A[size][size];
+//     int row,col,sum=0;
+//     printf("Enter the elements of matrix A: ");
+//     for(row=0;row<size;row++){
+//         for(col=0;col<size;col++){
+//             scanf("%d",&A[row][col]);
+//         }
+//     }
+//     // calculating the sum of row:
+//     for(row =0;row<size;row++){
+//         sum=0;
+//         for(col=0;col<size;col++){
+//             sum += A[row][col];
+//         }
+//         printf("sum of row %d: %d\n",row+1,sum);
+//     }
+//     for(row =0;row<size;row++){
+//         sum=0;
+//         for(col=0;col<size;col++){
+//             sum += A[col][row];
+//         }
+//         printf("sum of col %d: %d\n",row+1,sum);
+//     }
+//     return 0;
+// }
