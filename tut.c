@@ -1937,3 +1937,21 @@
 //     }
 //     return 0;
 // }
+
+//8. Write a C program to interchange diagonals of a matrix.
+
+// #include <stdio.h>
+// #define size 3
+// int main()
+// {
+//     int A[size][size];
+//     int row,col;
+//     for(row=0;row<size;row++){
+//         for(col=0;col<size;col++){
+//             if(row==col){
+//                 A[row][col]=
+//             }
+//         }
+//     }
+//     return 0;
+// }
