@@ -398,4 +398,5 @@ int main()
     while (*(str1++)=*(str2++));
     printf("%s",text1);
     return 0;
+    
 }
