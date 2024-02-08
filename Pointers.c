@@ -383,20 +383,95 @@
 // 14.Program to concatenate two strings using pointer
 
 
+// #include <stdio.h>
+// #define size 100
+// int main()
+// {
+//     char text1[size],text2[size];
+//     char *str1= text1;
+//     char *str2= text2;
+//     printf("Enter first string: ");
+//     gets(text1);
+//     printf("Enter second string: ");
+//     gets(text2);
+//     while(*str1++);
+//     while (*(str1++)=*(str2++));
+//     printf("%s",text1);
+//     return 0;
+    
+// }
+
+
+//15. Write a C program to compare two strings using pointers
+
+// #include <stdio.h>
+// #define size 100
+// int main()
+// {
+//     char str1[size];
+//     char str2[size];
+//     printf("Enter first string: ");
+//     gets(str1);
+//     printf("Enter second string: ");
+//     gets(str2);
+//     char *s1 =str1;
+//     char *s2 =str2;
+//     while((*s1 && *s2) && (*s1==*s2)){s1++;s2++;};
+//     int res =*s1-*s2;
+//     if(res ==0){
+//         printf("Two strings are equal");
+//     }
+//     else if (res<0){
+//         printf("First string is smaller than the other");
+//     }
+//     else{
+//         printf("Second string is smaller than the other");
+//     }
+//     return 0;
+// }
+
+// 16. Write a C program to compare two strings using pointers.
+
+// #include <stdio.h>
+// #define size 100
+// int main()
+// {
+//     char str1[size];
+//     char *s1;
+//     printf("Enter first string: ");
+//     gets(str1);
+//     s1=str1;
+//     printf(str1);
+//     return 0;
+// }
+
+
+// 17. program to sort an array using pointers
 #include <stdio.h>
-#define size 100
+#define size 10
 int main()
 {
-    char text1[size],text2[size];
-    char *str1= text1;
-    char *str2= text2;
-    printf("Enter first string: ");
-    gets(text1);
-    printf("Enter second string: ");
-    gets(text2);
-    while(*str1++);
-    while (*(str1++)=*(str2++));
-    printf("%s",text1);
+    int arr[]={ -5, -1, 0, 2, 4, 10, 15, 20, 24, 100,};
+    int *ptr=arr;
+    int i,j;
+    // for(i=0;i<size;i++){
+    //     scanf("%d",ptr+i);
+    // }
+    for(i=0;i<size;i++){
+        for(j=i+1;j<size;j++){
+            if(*(ptr+i)<*(ptr+j)){
+                //swap
+                int temp = *(ptr+j);
+                *(ptr+j)=*(ptr+i);
+                *(ptr+i)= temp;
+            }
+        }
+    }
+    for(i=0;i<size;i++){
+        printf("%d",*(ptr+i));
+        if(i!=size-1){
+            printf(",");
+        }
+    }
     return 0;
-    
 }
